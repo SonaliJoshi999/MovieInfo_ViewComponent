@@ -1,0 +1,36 @@
+﻿
+@{
+    ViewData["Title"] = "Default";
+}
+
+@model Sol_CoreMovieInfo_ViewComponent.ViewModel.MovieViewModel
+
+    <div class="container">
+        <div class="row">
+           
+                <div class="col-lg-4 col-xl-4 col-md-4 col-sm-4 d-flex align-items-stretch">
+
+                    <div class="card m-3">
+                        <img class='card-img-top' src='@Model.Movie.Url'>
+
+                        <div style='background-color:black; height:40px'>
+                            <center>
+                                <h5 class='card-title' style='color:white;line-height:40px'>
+                                    @Model.Movie.Title
+                                </h5>
+                            </center>
+                        </div>
+
+                        <div class='card-body'>
+                            <p class='card-text'>
+                                @Model.Movie.Details
+                            </p>
+                        </div>
+
+                        <a class='btn btn-primary' asp-action="@Model.ActionTuple.Item2" asp-controller="@Model.ActionTuple.Item1"> Back</a>
+                    </div>
+
+                </div>
+        </div>
+    </div>
+

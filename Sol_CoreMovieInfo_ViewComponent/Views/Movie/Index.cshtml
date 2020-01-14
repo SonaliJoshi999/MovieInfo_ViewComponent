@@ -1,0 +1,24 @@
+﻿
+@{
+    ViewData["Title"] = "Movie Details";
+}
+
+<h1>Movie Details</h1>
+
+<div class="container">
+    <div class="row">
+        <div class="col-12">
+            @*using Html Helper*@
+
+            @await Component.InvokeAsync("MovieComponents",new { controllerName="Movie",actionName="OnView" })
+
+        </div>
+    </div>
+    <div class="row">
+        <div class="col-12">
+            @*using Tag Helper*@
+            @*<vc:task-components is-show-complete="true" is-show-pending="false"></vc:task-components>*@
+        </div>
+    </div>
+</div>
+
